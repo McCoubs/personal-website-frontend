@@ -4,4 +4,4 @@ Flask-SQLAlchemy===2.2
 sqlalchemy==1.2.7
 requests>=2.20.0
 flask-cors
-pip install gunicorn==19.4.5
+gunicorn==19.4.5
