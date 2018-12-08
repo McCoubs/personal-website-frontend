@@ -1,8 +1,8 @@
 import sys
 import os
 sys.path.append('../')
-import src as app_root
-from src.app import create_app
+import backend.src as app_root
+from backend.src.app import create_app
 
 APP_ROOT_FOLDER = os.path.abspath(os.path.dirname(app_root.__file__))
 
