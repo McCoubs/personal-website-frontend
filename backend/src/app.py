@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_restful import Api
-from src.resources import *
+from backend.src.resources import *
 
 
 def create_app():
