@@ -1,0 +1,20 @@
+<div class="sum-square-difference-component solution-component">
+  <h1 class="solution-title">Sum Square Difference</h1>
+  <div *ngIf="alertMessage" class="alert-message">
+    {{ alertMessage }}
+  </div>
+  <form class="input-container">
+    <input #inputNumber class="solution-input" placeholder="enter a number..." type="number" min="0">
+    <button class="solution-submit-button" type="submit" (click)="sumSquareDifference(inputNumber.value)">Enter</button>
+  </form>
+  <div *ngIf="output || loading || output === 0" class="solution-output">
+    <fa-icon *ngIf="loading" class="loading-icon" size="2x" [icon]="faSpinner" [spin]="true"></fa-icon>
+    <span *ngIf="output || output === 0">The sum-square difference of {{ inputNumber.value }} is: {{ output }}</span>
+  </div>
+  <div class="write-up">
+    The sum-square difference of a number has little to no significance in mathematics other than being a generic
+    challenge on Project Euler. The only interesting part of this implementation is that the runtime can be done
+    in constant ( O(1) ) time when using the summation laws and formulas instead of iterating.
+  </div>
+</div>
+

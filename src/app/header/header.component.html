@@ -1,0 +1,43 @@
+<header class="header row sticky-top">
+  <div class="menu-col">
+    <nav class="navbar navbar-expand-md">
+      <a class="home-link navbar-brand" routerLink="/">Spencer McCoubrey</a>
+      <button class="navbar-toggler" type="button" aria-label="Toggle navigation" (click)="toggleNavbar()">
+        <fa-icon [icon]="faBars" size="2x"></fa-icon>
+      </button>
+      <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+        <ul class="navbar-nav">
+          <li class="projects-item item">
+            <a class="dropdown-toggle item non-clickable" (click)="openDropdown($event)">
+              Projects
+            </a>
+            <ul class="dropdown">
+              <li class="item"><a class="item" target="_blank" href="https://bill-split.spencermccoubrey.com" rel="nofollow">Bill-Split</a></li>
+              <li class="item"><a class="item" target="_blank" href="https://sample-maker.herokuapp.com/" rel="nofollow">Sample-Maker</a></li>
+              <li class="item"><a class="item" routerLink="/project-euler">Project-Euler</a></li>
+            </ul>
+          </li>
+          <li class="link-item item">
+            <a class="dropdown-toggle item non-clickable" (click)="openDropdown($event)">
+              Links
+            </a>
+            <ul class="dropdown right">
+              <li class="item">
+                <a class="item" href="https://www.linkedin.com/in/spencer-mccoubrey-38b559130/" target="_blank" rel="nofollow">LinkedIn<img class="icon" src="assets/linkedin-icon.svg"></a>
+              </li>
+              <li class="item">
+                <a class="item" href="https://github.com/McCoubs" target="_blank" rel="nofollow">Github<img class="icon" src="assets/github-icon.svg"></a>
+              </li>
+              <li class="item">
+                <a class="item" href="mailto:spencemcc@gmail.com">contact<fa-icon class="icon" [icon]="faEnvelope"></fa-icon></a>
+              </li>
+              <li class="item">
+                <a class="item" href="assets/resume.pdf" download>My Resume<img class="icon" src="assets/resume.svg"></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
