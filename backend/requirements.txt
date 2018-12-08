@@ -1,0 +1,6 @@
+flask==1.0.2
+flask-restful==0.3.6
+Flask-SQLAlchemy===2.2
+sqlalchemy==1.2.7
+requests==2.19.1
+flask-cors
