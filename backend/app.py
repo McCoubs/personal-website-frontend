@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_restful import Api
-from backend.src.resources import *
+from backend.resources import *
 
 
 def create_app():
@@ -12,7 +12,6 @@ def create_app():
     """
     # Initialize app. Flatten config_obj to dictionary (resolve properties).
     app = Flask(__name__)
-    # TODO specify actual endpoints here
 
     api = Api(app)
 
