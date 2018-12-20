@@ -103,4 +103,8 @@ ENV/
 *.iml
 .DS_Store
 
+dist/
+
+node_modules/
+
 backend/api-venv
