@@ -1,1 +1,1 @@
-web: gunicorn backend.runner:app
+web: gunicorn backend.runner:app && npm start
