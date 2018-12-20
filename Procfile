@@ -1,2 +1,2 @@
-server: gunicorn backend.runner:app
-web: npm start
+web: gunicorn backend.runner:app
+server: npm start
