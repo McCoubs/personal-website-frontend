@@ -33,8 +33,10 @@
       position: relative;
       cursor: pointer;
       border-radius: 3px;
+      transition: background 0.1s linear;
 
       .dropdown {
+        border-radius: 3px;
         padding: 12px;
         visibility: hidden;
         opacity: 0;
@@ -43,6 +45,7 @@
         left: 0;
         background-color: $palette-blue;
         color: #ffffff;
+        transition: opacity 0.2s linear;
 
         &.right {
           left: unset;
@@ -68,6 +71,13 @@
           color: $palette-blue;
           background-color: #ffffff;
         }
+      }
+
+      .icon {
+        font-size: 24px;
+        max-width: 24px;
+        max-height: 24px;
+        margin-left: 8px;
       }
     }
   }
