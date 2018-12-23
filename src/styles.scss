@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import './styles-variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,700|Poppins:400,500');
+
+
+body {
+  margin: 0;
+  font-family: Roboto;
+}
+
+.row {
+  margin: 0;
+}

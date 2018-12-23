@@ -1,0 +1,74 @@
+@import '../../styles-variables.scss';
+
+
+.header {
+  background-color: $palette-blue;
+  color: #ffffff;
+  font-size: 24px;
+  display: flex;
+  padding: 16px;
+
+  .name-col {
+    font-size: 36px;
+    align-items: center;
+    display: flex;
+
+    @media only screen and (min-width: map_get($grid-breakpoints, 'sm')) {
+      padding-left: 32px;
+    }
+  }
+
+  .menu-col {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    .item {
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      list-style: none;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      position: relative;
+      cursor: pointer;
+      border-radius: 3px;
+
+      .dropdown {
+        padding: 12px;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $palette-blue;
+        color: #ffffff;
+
+        &.right {
+          left: unset;
+          right: 0;
+        }
+      }
+
+      &:hover {
+        color: $palette-blue;
+        background-color: #ffffff;
+
+        > .dropdown {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      a {
+        background-color: $palette-blue;
+        color: #ffffff;
+
+        &:hover {
+          color: $palette-blue;
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+}
