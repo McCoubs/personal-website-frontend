@@ -13,7 +13,14 @@
     align-items: center;
     display: flex;
 
-    @media only screen and (min-width: map_get($grid-breakpoints, 'sm')) {
+    .home-link {
+      background-color: $palette-blue;
+      color: #ffffff;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    @media only screen and (min-width: map_get($grid-breakpoints, 'md')) {
       padding-left: 32px;
     }
   }
@@ -22,8 +29,35 @@
     justify-content: center;
     align-items: center;
     display: flex;
+    width: 100%;
 
-    .item {
+    .navbar {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      width: 100%;
+
+      .navbar-collapse {
+        flex-grow: 0;
+        transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+      }
+    }
+
+    .navbar-toggler {
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+    .home-link {
+      background-color: $palette-blue;
+      color: #ffffff;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 36px;
+    }
+
+    .item, .nav-item {
+      width: fit-content;
       padding: 0 24px;
       display: flex;
       align-items: center;
