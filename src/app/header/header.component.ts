@@ -9,11 +9,10 @@ import { ProjectEulerService } from '../project-euler.service';
 export class HeaderComponent {
   navbarOpen = false;
 
-  constructor(private projectEuler: ProjectEulerService) {}
+  constructor() {}
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
-    this.projectEuler.testEndpoint();
   }
 
   toggleDropdown(element) {
