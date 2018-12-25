@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // package imports
-import { NgbCollapseModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCollapseModule, NgbModule, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   imports: [
+    NgbDropdownModule,
     NgbCollapseModule,
     NgbModule,
     AngularFontAwesomeModule
@@ -19,7 +20,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     ReactiveFormsModule,
     NgbCollapseModule,
     NgbModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    NgbDropdownModule
   ]
 })
 export class SharedModule {}
