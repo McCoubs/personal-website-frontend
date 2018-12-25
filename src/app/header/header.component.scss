@@ -23,12 +23,6 @@
 
       .navbar-collapse {
         flex-grow: 0;
-        transition: all .3s ease;
-        -webkit-transition: all .3s ease;
-      }
-
-      .navbar-nav {
-        //align-items: center;
       }
     }
 
@@ -69,7 +63,9 @@
       .dropdown, .dropdown-menu {
         border-radius: 3px;
         padding: 12px;
-        display: none;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
         top: 100%;
         left: 0;
         position: absolute;
@@ -94,7 +90,8 @@
         }
 
         > .dropdown {
-          display: block;
+          opacity: 1;
+          visibility: visible;
         }
       }
 
