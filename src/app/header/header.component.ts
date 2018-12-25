@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProjectEulerService } from '../project-euler.service';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,11 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   navbarOpen = false;
 
-  constructor() {}
+  constructor(private projectEuler: ProjectEulerService) {}
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
+    this.projectEuler.testEndpoint();
   }
 
   toggleDropdown(element) {
