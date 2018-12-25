@@ -2,33 +2,42 @@
   <div class="menu-col">
     <nav class="navbar navbar-expand-md navbar-light">
       <a class="home-link navbar-brand" routerLink="/">Spencer McCoubrey</a>
-
       <button class="navbar-toggler" type="button" aria-label="Toggle navigation" (click)="toggleNavbar()">
         <fa name="bars" size="2x"></fa>
       </button>
       <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
         <ul class="navbar-nav mr-auto">
           <li class="projects-item item">
-            Projects
+            <a class="dropdown-toggle item">
+              Projects
+            </a>
             <ul class="dropdown">
-              <li class="item">
-                Project-Euler
-              </li>
-              <li class="item">
-                Maze-Generator
-              </li>
+              <li class="item"><a class="item">Project-Euler</a></li>
+              <li class="item"><a class="item">Maze-Generator</a></li>
             </ul>
           </li>
           <li class="about-item item">
-            About Me
+            <a class="item">
+              About Me
+            </a>
           </li>
           <li class="link-item item">
-            Links
+            <a class="dropdown-toggle item">
+              Links
+            </a>
             <ul class="dropdown right">
-              <a class="item" href="https://www.linkedin.com/in/spencer-mccoubrey-38b559130/" target="_blank">LinkedIn<img class="icon" src="assets/linkedin-icon.svg"></a>
-              <a class="item" href="https://github.com/McCoubs" target="_blank">Github<img class="icon" src="assets/github-icon.svg"></a>
-              <a class="item" href="mailto:spencemcc@gmail.com">spencemcc@gmail.com</a>
-              <a class="item" href="assets/resume.pdf" download>My Resume<img class="icon" src="assets/resume.svg"></a>
+              <li class="item">
+                <a class="item" href="https://www.linkedin.com/in/spencer-mccoubrey-38b559130/" target="_blank">LinkedIn<img class="icon" src="assets/linkedin-icon.svg"></a>
+              </li>
+              <li class="item">
+                <a class="item" href="https://github.com/McCoubs" target="_blank">Github<img class="icon" src="assets/github-icon.svg"></a>
+              </li>
+              <li class="item">
+                <a class="item" href="mailto:spencemcc@gmail.com">spencemcc@gmail.com</a>
+              </li>
+              <li class="item">
+                <a class="item" href="assets/resume.pdf" download>My Resume<img class="icon" src="assets/resume.svg"></a>
+              </li>
             </ul>
           </li>
         </ul>

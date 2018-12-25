@@ -8,23 +8,6 @@
   display: flex;
   padding: 16px;
 
-  .name-col {
-    font-size: 36px;
-    align-items: center;
-    display: flex;
-
-    .home-link {
-      background-color: $palette-blue;
-      color: #ffffff;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    @media only screen and (min-width: map_get($grid-breakpoints, 'md')) {
-      padding-left: 32px;
-    }
-  }
-
   .menu-col {
     justify-content: center;
     align-items: center;
@@ -36,11 +19,16 @@
       align-items: center;
       display: flex;
       width: 100%;
+      padding: 0;
 
       .navbar-collapse {
         flex-grow: 0;
         transition: all .3s ease;
         -webkit-transition: all .3s ease;
+      }
+
+      .navbar-nav {
+        //align-items: center;
       }
     }
 
@@ -48,38 +36,50 @@
       color: #ffffff;
       border-color: #ffffff;
     }
+
     .home-link {
       background-color: $palette-blue;
       color: #ffffff;
       cursor: pointer;
       text-decoration: none;
       font-size: 36px;
+      margin: 0;
+
+      @media only screen and (max-width: map_get($grid-breakpoints, 'sm')) {
+        font-size: 24px;
+      }
     }
 
-    .item, .nav-item {
+    .item {
+      background-color: $palette-blue;
+      color: #ffffff;
       width: fit-content;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
       list-style: none;
+      display: block;
       text-overflow: ellipsis;
       white-space: nowrap;
       position: relative;
-      cursor: pointer;
       border-radius: 3px;
-      transition: background 0.1s linear;
+
+      &:not(li) {
+        cursor: pointer;
+        padding: 0 24px;
+      }
 
       .dropdown {
         border-radius: 3px;
         padding: 12px;
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
+        display: none;
         top: 100%;
         left: 0;
+        position: absolute;
         background-color: $palette-blue;
         color: #ffffff;
         transition: opacity 0.2s linear;
+
+        @media only screen and (max-width: map_get($grid-breakpoints, 'md')) {
+          position: static;
+        }
 
         &.right {
           left: unset;
@@ -88,22 +88,13 @@
       }
 
       &:hover {
-        color: $palette-blue;
-        background-color: #ffffff;
-
-        > .dropdown {
-          visibility: visible;
-          opacity: 1;
-        }
-      }
-
-      a {
-        background-color: $palette-blue;
-        color: #ffffff;
-
-        &:hover {
+        > a {
           color: $palette-blue;
           background-color: #ffffff;
+        }
+
+        > .dropdown {
+          display: block;
         }
       }
 
