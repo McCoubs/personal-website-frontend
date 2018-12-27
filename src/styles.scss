@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,700|Poppins:400,500');
 
 
-body {
+body, html {
   height: 100%;
   margin: 0;
   font-family: Roboto;
+  background-color: $palette-cream;
 }
 
 .row {
@@ -14,9 +15,4 @@ body {
 
 .router-container {
   display: flex;
-  min-height: 80vh;
-
-  div {
-    height: 100%;
-  }
 }
