@@ -8,21 +8,21 @@
       <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
         <ul class="navbar-nav mr-auto">
           <li class="projects-item item">
-            <a class="dropdown-toggle item">
+            <a class="dropdown-toggle item non-clickable">
               Projects
             </a>
             <ul class="dropdown">
-              <li class="item"><a class="item">Project-Euler</a></li>
+              <li class="item"><a class="item" routerLink="/project-euler">Project-Euler</a></li>
               <li class="item"><a class="item">Maze-Generator</a></li>
             </ul>
           </li>
           <li class="about-item item">
-            <a class="item">
+            <a class="item" routerLink="/about-me">
               About Me
             </a>
           </li>
           <li class="link-item item">
-            <a class="dropdown-toggle item">
+            <a class="dropdown-toggle item non-clickable">
               Links
             </a>
             <ul class="dropdown right">

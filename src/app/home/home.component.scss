@@ -1,0 +1,20 @@
+@import '../../styles-variables.scss';
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $palette-cream;
+  font-size: 24px;
+  text-align: center;
+  padding: 24px;
+
+  @media only screen and (min-width: map_get($grid-breakpoints, 'md')) {
+    font-size: 36px;
+  }
+
+  .text {
+    padding: 12px 0;
+  }
+}

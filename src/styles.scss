@@ -3,10 +3,20 @@
 
 
 body {
+  height: 100%;
   margin: 0;
   font-family: Roboto;
 }
 
 .row {
   margin: 0 !important;
+}
+
+.router-container {
+  display: flex;
+  min-height: 80vh;
+
+  div {
+    height: 100%;
+  }
 }
