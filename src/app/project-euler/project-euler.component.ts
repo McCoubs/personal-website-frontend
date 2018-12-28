@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectEulerComponent implements OnInit {
 
+  sideBarOpen = true;
+
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
+  sideBarToggle() {
+    this.sideBarOpen = !this.sideBarOpen;
+  }
 }

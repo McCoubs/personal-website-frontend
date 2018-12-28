@@ -1,3 +1,12 @@
-<p>
-  project-euler works!
-</p>
+<div class="project-euler-container row">
+  <button class="side-menu-button" type="button" [ngClass]="{ 'flipped': sideBarOpen }" (click)="sideBarToggle()">
+    <fa class="icon" name="chevron-right" size="2x"></fa>
+  </button>
+  <div class="project-selector" [ngClass]="{ 'open': sideBarOpen }">
+    <li>test</li>
+    <li>test2</li>
+  </div>
+  <div class="current-project" [ngClass]="{ 'pushed': sideBarOpen }">
+
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { SharedModule } from './shared.module';
+import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +25,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
     AppRoutingModule,
   ],
   exports: [
+    SharedModule,
     HttpClientModule
   ],
   providers: [],
