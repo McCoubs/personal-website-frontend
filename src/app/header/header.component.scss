@@ -54,14 +54,10 @@
       white-space: nowrap;
       position: relative;
       border-radius: 3px;
-      cursor: default;
+      cursor: pointer;
 
       &:not(li) {
         padding: 0 24px;
-      }
-
-      &:not(.non-clickable):not(li) {
-        cursor: pointer;
       }
 
       .dropdown, .dropdown-menu {
@@ -72,13 +68,19 @@
         position: absolute;
         top: 100%;
         left: 0;
-        position: absolute;
         background-color: $palette-blue;
         color: #ffffff;
         transition: opacity 0.2s linear;
 
         @media only screen and (max-width: map_get($grid-breakpoints, 'md')) {
           position: static;
+          visibility: visible;
+          opacity: 1;
+          display: none;
+
+          &.show {
+            display: block;
+          }
         }
 
         &.right {
