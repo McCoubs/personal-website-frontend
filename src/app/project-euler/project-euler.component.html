@@ -3,10 +3,16 @@
     <fa class="icon" name="chevron-right" size="2x"></fa>
   </button>
   <div class="project-selector" [ngClass]="{ 'open': sideBarOpen }">
-    <li>test</li>
-    <li>test2</li>
+    <button class="close-button" type="button" (click)="sideBarToggle()">
+      <fa class="icon" name="window-close" size="2x"></fa>
+    </button>
+    <div class="project-options-container">
+      <button *ngFor="let project of projectsList" class="project-item" type="button" (click)="selectProject(project)">
+        {{ project['name'] }}
+      </button>
+    </div>
   </div>
   <div class="current-project" [ngClass]="{ 'pushed': sideBarOpen }">
-
+    <div ad-host></div>
   </div>
 </div>

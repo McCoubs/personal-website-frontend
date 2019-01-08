@@ -15,10 +15,7 @@ export class HeaderComponent {
         // if routing stopped
         if (event instanceof NavigationEnd) {
           // un-open all dropdowns and close menu
-          let dropdowns = document.getElementsByClassName('navbar-nav')[0].querySelectorAll('.dropdown');
-          dropdowns.forEach(function (dropdown) {
-            dropdown.classList.remove('show');
-          });
+          this.resetDropdowns();
           this.navbarOpen = false;
         }
       }
@@ -27,10 +24,19 @@ export class HeaderComponent {
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
+    this.resetDropdowns();
   }
 
   openDropdown($event) {
     const dropdown = $event.target.nextElementSibling;
     dropdown.classList.toggle('show');
+  }
+
+  resetDropdowns() {
+    // un-open all dropdowns and close menu
+    let dropdowns = document.getElementsByClassName('navbar-nav')[0].querySelectorAll('.dropdown');
+    dropdowns.forEach(function (dropdown) {
+      dropdown.classList.remove('show');
+    });
   }
 }
