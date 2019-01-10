@@ -1,0 +1,22 @@
+@import '../../styles-variables';
+
+.solution-component {
+  text-align: center;
+  padding: 12px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media only screen and (max-width: map_get($grid-breakpoints, 'md')) {
+    padding: 12px 24px;
+  }
+
+  .solution-title {
+    font-size: 3rem;
+  }
+
+  .write-up {
+    font-size: 20px;
+  }
+}

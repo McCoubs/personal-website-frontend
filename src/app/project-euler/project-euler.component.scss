@@ -122,7 +122,6 @@
     width: 100vw;
     transition: margin-left 0.5s;
 
-
     @media only screen and (min-width: map_get($grid-breakpoints, 'md')) {
       &.pushed {
         margin-left: $menu-width-md;
