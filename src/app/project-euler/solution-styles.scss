@@ -49,10 +49,6 @@
       width: 40%;
       border: none;
       border-radius: 3px;
-
-      @media only screen and (max-width: map_get($grid-breakpoints, 'md')) {
-        width: 80%;
-      }
     }
 
     .solution-submit-button {
@@ -67,6 +63,18 @@
       &:hover {
         color: $palette-blue;
         background-color: #ffffff;
+      }
+    }
+
+    @media only screen and (max-width: map_get($grid-breakpoints, 'md')) {
+      flex-direction: column;
+
+      .solution-input, .solution-submit-button {
+        width: 80%;
+
+        &:not(:first-child) {
+          margin-top: 12px;
+        }
       }
     }
   }
