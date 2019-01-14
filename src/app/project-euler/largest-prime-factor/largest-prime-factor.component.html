@@ -1,3 +1,21 @@
-<p>
-  largest-prime-factor works!
-</p>
+<div class="largest-prime-factor-component solution-component">
+  <h1 class="solution-title">Largest Prime Factor</h1>
+  <div *ngIf="alertMessage" class="alert-message">
+    {{ alertMessage }}
+  </div>
+  <div class="input-container">
+    <input #inputNumber class="solution-input" placeholder="enter a number..." type="number" min="0">
+    <button class="solution-submit-button" type="button" (click)="largestPrimeFactor(inputNumber.value)">Enter</button>
+  </div>
+  <div *ngIf="output || loading" class="solution-output">
+    <fa *ngIf="loading" class="loading-icon" size="2x" name="spinner" animation="spin"></fa>
+    <span *ngIf="output">The largest prime factor of {{ inputNumber.value }} is: {{ output }}</span>
+  </div>
+  <div class="write-up">
+    While not very difficult to implement or understand, finding the largest prime factor of numbers or any prime factors is important
+    when considering the impact prime factorization and factoring in general has on computation and complexity. Computers aren't
+    very good at factoring, so much of modern Cryptography (ex. RSA) is built on the principle of factoring being expensive
+    for computers. Prime factors are interesting, as prime numbers are the building blocks of numbers, and factoring has
+    interesting unforeseen consequences in computer science.
+  </div>
+</div>

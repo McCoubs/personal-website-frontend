@@ -4,7 +4,7 @@
     {{ alertMessage }}
   </div>
   <div class="input-container">
-    <input #nthPrime class="solution-input" placeholder="enter nth prime to find..." type="number">
+    <input #nthPrime class="solution-input" placeholder="enter nth prime to find..." type="number" min="0">
     <button class="solution-submit-button" type="button" (click)="findNthPrime(nthPrime.value)">Enter</button>
   </div>
   <div *ngIf="output || loading" class="solution-output">

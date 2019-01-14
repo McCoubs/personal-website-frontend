@@ -18,22 +18,28 @@ export class FindNthPrimeComponent {
     if (!nthPrime) {
       this.alertMessage = 'please input a selection before submitting';
     } else {
+      // reset vars
+      this.alertMessage = null;
       this.loading = true;
       this.output = null;
+      // hit api for value
       this.projectEulerService.findNthPrime(nthPrime).subscribe(
+        // on success display and stop loading
         (value) => {
           this.loading = false;
           this.output = value['result'];
         },
+        // on error show given error or generic one and stop loading
         (error) => {
           this.loading = false;
-          this.alertMessage = error['message'] || 'there was an issue calculating result, please refresh and/or try again';
+          this.alertMessage = error['error']['message'] || 'there was an issue calculating result, please refresh and/or try again';
         }
       );
     }
   }
 
   ordinalSuffix(i: number): string {
+    // function ordinalizes a given number
     let j = i % 10;
     let k = i % 100;
     if (j === 1 && k !== 11) {
