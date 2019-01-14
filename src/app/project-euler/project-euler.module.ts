@@ -9,6 +9,7 @@ import { FindNthPrimeComponent } from './find-nth-prime/find-nth-prime.component
 import { LargestContinuousProductComponent } from './largest-continuous-product/largest-continuous-product.component';
 import { LargestPrimeFactorComponent } from './largest-prime-factor/largest-prime-factor.component';
 import { PythagoreanTripletsComponent } from './pythagorean-triplets/pythagorean-triplets.component';
+import { ProjectEulerService } from './project-euler.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,9 @@ import { PythagoreanTripletsComponent } from './pythagorean-triplets/pythagorean
     LargestContinuousProductComponent,
     LargestPrimeFactorComponent,
     PythagoreanTripletsComponent
+  ],
+  providers: [
+    ProjectEulerService
   ]
 })
 export class ProjectEulerModule { }

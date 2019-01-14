@@ -1,8 +1,20 @@
 <div class="nth-prime-component solution-component">
   <h1 class="solution-title">Find the Nth Prime</h1>
+  <div *ngIf="alertMessage" class="alert-message">
+    {{ alertMessage }}
+  </div>
+  <div class="input-container">
+    <input #nthPrime class="solution-input" placeholder="enter nth prime to find..." type="number">
+    <button class="solution-submit-button" type="button" (click)="findNthPrime(nthPrime.value)">Enter</button>
+  </div>
+  <div *ngIf="output || loading" class="solution-output">
+    <fa *ngIf="loading" class="loading-icon" size="2x" name="spinner" animation="spin"></fa>
+    <span *ngIf="output">The {{ ordinalSuffix(nthPrime.value) }} prime is: {{ output }}</span>
+  </div>
   <div class="write-up">
     Interestingly, there is no currently known way to functionally generate the 'nth prime'. But we can generate an upper bound for the 'nth prime'.
-    So instead, using a prime number sieve (see <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes" target="_blank" rel="nofollow">Sieve of Eratosthenes</a>)
+    So instead, using a prime number sieve (see <a href="https://en.wikipedia.org/wiki/Sieve_
+    of_Eratosthenes" target="_blank" rel="nofollow">Sieve of Eratosthenes</a>)
     and the upper bound, we can sieve the natural numbers up to the upper bound estimate of the nth prime, and then retrieve the nth prime.
     The result is not very efficient, but it can be improved by using different sieving techniques and generating a more accurate upper bound.
   </div>

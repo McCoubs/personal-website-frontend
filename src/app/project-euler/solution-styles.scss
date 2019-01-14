@@ -16,7 +16,58 @@
     font-size: 3rem;
   }
 
+  .alert-message {
+    font-size: 18px;
+    color: orangered;
+  }
+
   .write-up {
     font-size: 20px;
+  }
+
+  .solution-output {
+    font-size: 20px;
+    text-align: center;
+    padding: 12px;
+
+    .loading-icon {
+      color: $palette-blue;
+    }
+  }
+
+  .input-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+
+    .solution-input {
+      padding: 6px 12px;
+      background-color: lightgray;
+      color: $palette-blue;
+      width: 40%;
+      border: none;
+      border-radius: 3px;
+
+      @media only screen and (max-width: map_get($grid-breakpoints, 'md')) {
+        width: 80%;
+      }
+    }
+
+    .solution-submit-button {
+      width: 40%;
+      padding: 6px 12px;
+      background-color: $palette-blue;
+      color: #ffffff;
+      border-radius: 3px;
+      border: $palette-blue 1px solid;
+      cursor: pointer;
+
+      &:hover {
+        color: $palette-blue;
+        background-color: #ffffff;
+      }
+    }
   }
 }
