@@ -25,4 +25,8 @@ export class ProjectEulerService {
   largestContinuousProduct(inputSeries: number, inputAdjacent: number): Observable<Object> {
     return this.http.get(environment.apiEndpoint + '/largest_continuous_product?series=' + inputSeries + '&adjacent=' + inputAdjacent);
   }
+
+  pythagoreanTriplets(inputNumber: number): Observable<Object> {
+    return this.http.get(environment.apiEndpoint + '/pythagorean_triplets?value=' + inputNumber);
+  }
 }
