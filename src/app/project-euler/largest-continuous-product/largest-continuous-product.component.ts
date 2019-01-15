@@ -16,7 +16,7 @@ export class LargestContinuousProductComponent {
 
   constructor(private projectEulerService: ProjectEulerService) {}
 
-  largestContinuousProduct(inputSeries: number, inputAdjacent: number): void {
+  largestContinuousProduct(inputSeries: number | string, inputAdjacent: number): void {
     if (!inputSeries || !inputAdjacent) {
       this.alertMessage = 'please input a selection before submitting';
     } else {
