@@ -3,10 +3,10 @@
   <div *ngIf="alertMessage" class="alert-message">
     {{ alertMessage }}
   </div>
-  <div class="input-container">
+  <form class="input-container">
     <input #inputNumber class="solution-input" placeholder="enter a number..." type="number" min="0">
-    <button class="solution-submit-button" type="button" (click)="largestPrimeFactor(inputNumber.value)">Enter</button>
-  </div>
+    <button class="solution-submit-button" type="submit" (click)="largestPrimeFactor(inputNumber.value)">Enter</button>
+  </form>
   <div *ngIf="output || loading" class="solution-output">
     <fa *ngIf="loading" class="loading-icon" size="2x" name="spinner" animation="spin"></fa>
     <span *ngIf="output">The largest prime factor of {{ inputNumber.value }} is: {{ output }}</span>

@@ -21,4 +21,8 @@ export class ProjectEulerService {
   sumSquareDifference(inputNumber: number): Observable<Object> {
     return this.http.get(environment.apiEndpoint + '/sum_square_difference?value=' + inputNumber);
   }
+
+  largestContinuousProduct(inputSeries: number, inputAdjacent: number): Observable<Object> {
+    return this.http.get(environment.apiEndpoint + '/largest_continuous_product?series=' + inputSeries + '&adjacent=' + inputAdjacent);
+  }
 }

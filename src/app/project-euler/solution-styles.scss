@@ -1,5 +1,17 @@
 @import '../../styles-variables';
 
+@mixin column-inputs() {
+  flex-direction: column;
+
+  .solution-input, .solution-submit-button {
+    width: 80%;
+
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+  }
+}
+
 .solution-component {
   text-align: center;
   padding: 12px 100px;
@@ -67,15 +79,11 @@
     }
 
     @media only screen and (max-width: map_get($grid-breakpoints, 'md')) {
-      flex-direction: column;
+      @include column-inputs();
+    }
 
-      .solution-input, .solution-submit-button {
-        width: 80%;
-
-        &:not(:first-child) {
-          margin-top: 12px;
-        }
-      }
+    &.columns {
+      @include column-inputs();
     }
   }
 }
