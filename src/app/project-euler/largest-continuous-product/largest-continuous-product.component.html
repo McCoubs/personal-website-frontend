@@ -9,9 +9,9 @@
     <button class="solution-submit-button w-50" type="button" (click)="generateExample()">Need Help? Generate an Example</button>
     <button class="solution-submit-button" type="submit" (click)="largestContinuousProduct(inputSeries.value, inputAdjacent.value)">Enter</button>
   </form>
-  <div *ngIf="output || loading" class="solution-output">
+  <div *ngIf="output || loading || output === 0" class="solution-output">
     <fa *ngIf="loading" class="loading-icon" size="2x" name="spinner" animation="spin"></fa>
-    <span *ngIf="output">The largest continuous product of {{ inputAdjacent.value }} values in the series is: {{ output }}</span>
+    <span *ngIf="output || output === 0">The largest continuous product of {{ inputAdjacent.value }} values in the series is: {{ output }}</span>
   </div>
   <div class="write-up">
     The largest continuous product is essentially iterating through the series at intervals of the size <i>adjacent</i>, keeping

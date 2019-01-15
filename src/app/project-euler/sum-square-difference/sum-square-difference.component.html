@@ -7,9 +7,9 @@
     <input #inputNumber class="solution-input" placeholder="enter a number..." type="number" min="0">
     <button class="solution-submit-button" type="submit" (click)="sumSquareDifference(inputNumber.value)">Enter</button>
   </form>
-  <div *ngIf="output || loading" class="solution-output">
+  <div *ngIf="output || loading || output === 0" class="solution-output">
     <fa *ngIf="loading" class="loading-icon" size="2x" name="spinner" animation="spin"></fa>
-    <span *ngIf="output">The sum-square difference of {{ inputNumber.value }} is: {{ output }}</span>
+    <span *ngIf="output || output === 0">The sum-square difference of {{ inputNumber.value }} is: {{ output }}</span>
   </div>
   <div class="write-up">
     The sum-square difference of a number has little to no significance in mathematics other than being a generic

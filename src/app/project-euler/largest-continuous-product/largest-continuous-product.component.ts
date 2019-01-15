@@ -45,7 +45,6 @@ export class LargestContinuousProductComponent {
     let length = Math.floor(Math.random() * (50 - 10 + 1) + 10);
     // generate random adjacent length
     let adjacent = Math.floor(Math.random() * 10) + 1;
-    console.log(this.inputAdjacent.nativeElement, this.inputSeries.nativeElement);
 
     let series: number | string = '';
     // generate a series of random length of digits 0-9

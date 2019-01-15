@@ -7,9 +7,9 @@
     <input #nthPrime class="solution-input" placeholder="enter nth prime to find..." type="number" min="0">
     <button class="solution-submit-button" type="submit" (click)="findNthPrime(nthPrime.value)">Enter</button>
   </form>
-  <div *ngIf="output || loading" class="solution-output">
+  <div *ngIf="output || loading || output === 0" class="solution-output">
     <fa *ngIf="loading" class="loading-icon" size="2x" name="spinner" animation="spin"></fa>
-    <span *ngIf="output">The {{ ordinalSuffix(nthPrime.value) }} prime is: {{ output }}</span>
+    <span *ngIf="output || output === 0">The {{ ordinalSuffix(nthPrime.value) }} prime is: {{ output }}</span>
   </div>
   <div class="write-up">
     Interestingly, there is no currently known way to functionally generate the 'nth prime'. But we can generate an upper bound for the 'nth prime'.

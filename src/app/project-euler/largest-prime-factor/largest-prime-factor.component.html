@@ -7,9 +7,9 @@
     <input #inputNumber class="solution-input" placeholder="enter a number..." type="number" min="0">
     <button class="solution-submit-button" type="submit" (click)="largestPrimeFactor(inputNumber.value)">Enter</button>
   </form>
-  <div *ngIf="output || loading" class="solution-output">
+  <div *ngIf="output || loading || output === 0" class="solution-output">
     <fa *ngIf="loading" class="loading-icon" size="2x" name="spinner" animation="spin"></fa>
-    <span *ngIf="output">The largest prime factor of {{ inputNumber.value }} is: {{ output }}</span>
+    <span *ngIf="output || output === 0">The largest prime factor of {{ inputNumber.value }} is: {{ output }}</span>
   </div>
   <div class="write-up">
     While not very difficult to implement or understand, finding the largest prime factor of numbers or any prime factors is important
