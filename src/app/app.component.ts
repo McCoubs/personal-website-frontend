@@ -10,6 +10,6 @@ import { environment } from '../environments/environment';
 export class AppComponent {
 
   constructor(private http: HttpClient) {
-    this.http.get(environment.apiEndpoint + '/ping').subscribe();
+    this.http.get(environment.apiEndpoint + '/wake-up-call').subscribe();
   }
 }
