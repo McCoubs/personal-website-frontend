@@ -4,4 +4,4 @@
 
 - install node version 10.9.0 or greater and @angular-cli npm package
 - run `npm install` to install all required dependencies locally
-- run `ng serve` and wait for compilation and success message, server should now be running at `https://localhost:4200`
+- run `ng serve` and wait for compilation and success message, server should now be running at `http://localhost:4200`

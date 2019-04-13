@@ -34,7 +34,7 @@ export class HeaderComponent {
 
   resetDropdowns() {
     // un-open all dropdowns and close menu
-    let dropdowns = document.getElementsByClassName('navbar-nav')[0].querySelectorAll('.dropdown');
+    const dropdowns = document.getElementsByClassName('navbar-nav')[0].querySelectorAll('.dropdown');
     dropdowns.forEach(function (dropdown) {
       dropdown.classList.remove('show');
     });
