@@ -1,0 +1,130 @@
+@import '../../styles-variables';
+
+.project-euler-container {
+
+  $menu-width-md: 30%;
+  $menu-width-sm: 100%;
+
+  @media only screen and (max-width: map_get($grid-breakpoints, 'md')) {
+    $project-menu-width: 100%;
+  }
+
+  .close-button {
+    display: none;
+    outline: none;
+    font-size: 24px;
+    position: absolute;
+    top: 8px;
+    right: 2px;
+    cursor: pointer;
+    background-color: transparent;
+    color: $palette-salmon;
+    border: none;
+    z-index: 1020;
+    transition: left 0.3s;
+
+    @media only screen and (max-width: map_get($grid-breakpoints, 'md')) {
+      display: block;
+    }
+
+    .icon {
+      font-size: 24px;
+      display: block;
+    }
+  }
+
+  .side-menu-button {
+    outline: none;
+    font-size: 24px;
+    position: fixed;
+    top: 50%;
+    left: -4px;
+    height: 80px;
+    border-radius: 0 60px 60px 0;
+    cursor: pointer;
+    background-color: $palette-blue;
+    color: $palette-salmon;
+    z-index: 1020;
+    transition: left 0.5s;
+
+    .icon {
+      font-size: 24px;
+      display: block;
+      margin-top: 8px;
+    }
+
+    &.flipped {
+      transform: rotate(180deg);
+      border-radius: 60px 0 0 60px;
+      left: calc(#{$menu-width-md} - 4px);
+
+      @media only screen and (max-width: map_get($grid-breakpoints, 'md')) {
+        left: calc(#{$menu-width-sm} - 4px);
+      }
+    }
+  }
+
+  .project-selector {
+    height: 60vh;
+    max-height: 60vh;
+    width: $menu-width-md;
+    left: -$menu-width-md;
+    background-color: $palette-blue;
+    position: fixed;
+    top: 25%;
+    z-index: 1020;
+    overflow: auto;
+    transition: left 0.5s;
+    border-radius: 0 4px 4px 0;
+
+    @media only screen and (max-width: map_get($grid-breakpoints, 'md')) {
+      width: $menu-width-sm;
+      left: -$menu-width-sm;
+    }
+
+    &.open {
+      left: 0;
+    }
+
+    .project-item {
+      cursor: pointer;
+      display: block;
+      padding: 8px;
+      margin: 8px 0;
+      background-color: $palette-salmon;
+      color: #ffffff;
+      border: $palette-salmon 1px solid;
+      border-radius: 3px;
+      overflow: auto;
+
+      &:hover {
+        color: $palette-salmon;
+        background-color: #ffffff;
+      }
+    }
+
+    .project-options-container {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+
+  .current-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 100vw;
+    transition: margin-left 0.5s;
+
+    @media only screen and (min-width: map_get($grid-breakpoints, 'md')) {
+      &.pushed {
+        margin-left: $menu-width-md;
+      }
+    }
+  }
+}

@@ -2,8 +2,6 @@
 
 ## local environment
 
-- install python >= 3.65
-- `pip3 install virtualvenv` (for virtual python env)
-- `virtualenv ~/{path_to_project}/backend/api-venv --python={path_to_python3}`
-- `source ~/{path_to_project}/backend/api-venv/bin/activate`
-- `pip install -r requirements.txt`
+- install node version 10.9.0 or greater and @angular-cli npm package
+- run `npm install` to install all required dependencies locally
+- run `ng serve` and wait for compilation and success message, server should now be running at `http://localhost:4200`

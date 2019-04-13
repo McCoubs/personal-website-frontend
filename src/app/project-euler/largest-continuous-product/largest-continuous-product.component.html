@@ -1,0 +1,21 @@
+<div class="largest-continuous-product-component solution-component">
+  <h1 class="solution-title">Largest Continuous Product</h1>
+  <div *ngIf="alertMessage" class="alert-message">
+    {{ alertMessage }}
+  </div>
+  <form class="input-container columns">
+    <input #inputSeries class="solution-input" placeholder="enter a continuous series..." type="number" min="0">
+    <input #inputAdjacent class="solution-input" placeholder="enter count of adjacent to compare..." type="number" min="0">
+    <button class="solution-submit-button w-50" type="button" (click)="generateExample()">Need Help? Generate an Example</button>
+    <button class="solution-submit-button" type="submit" (click)="largestContinuousProduct(inputSeries.value, inputAdjacent.value)">Enter</button>
+  </form>
+  <div *ngIf="output || loading || output === 0" class="solution-output">
+    <fa *ngIf="loading" class="loading-icon" size="2x" name="spinner" animation="spin"></fa>
+    <span *ngIf="output || output === 0">The largest continuous product of {{ inputAdjacent.value }} values in the series is: {{ output }}</span>
+  </div>
+  <div class="write-up">
+    The largest continuous product is essentially iterating through the series at intervals of the size <i>adjacent</i>, keeping
+    track of the largest product found. While not particularly efficient or interesting, there are ways to improve the algorithm simply,
+    including scanning for zeroes and using languages which are efficient at string comprehension and indexing.
+  </div>
+</div>

@@ -2,11 +2,17 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,700|Poppins:400,500');
 
 
-body {
+body, html {
+  height: 100%;
   margin: 0;
-  font-family: Roboto;
+  font-family: Roboto !important;
+  background-color: $palette-cream !important;
 }
 
 .row {
-  margin: 0;
+  margin: 0 !important;
+}
+
+.router-container {
+  display: flex;
 }

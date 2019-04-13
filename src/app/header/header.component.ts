@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProjectEulerService } from '../project-euler.service';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,10 +9,34 @@ import { ProjectEulerService } from '../project-euler.service';
 export class HeaderComponent {
   navbarOpen = false;
 
-  constructor(private projectEuler: ProjectEulerService) {}
+  constructor(private router: Router) {
+    // listen to router changes
+    router.events.subscribe((event) => {
+        // if routing stopped
+        if (event instanceof NavigationEnd) {
+          // un-open all dropdowns and close menu
+          this.resetDropdowns();
+          this.navbarOpen = false;
+        }
+      }
+    );
+  }
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
-    this.projectEuler.testEndpoint();
+    this.resetDropdowns();
+  }
+
+  openDropdown($event) {
+    const dropdown = $event.target.nextElementSibling;
+    dropdown.classList.toggle('show');
+  }
+
+  resetDropdowns() {
+    // un-open all dropdowns and close menu
+    const dropdowns = document.getElementsByClassName('navbar-nav')[0].querySelectorAll('.dropdown');
+    dropdowns.forEach(function (dropdown) {
+      dropdown.classList.remove('show');
+    });
   }
 }
