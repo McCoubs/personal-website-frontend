@@ -17,9 +17,42 @@
   .heading-text {
     font-size: 36px;
     color: $palette-blue;
+    margin-bottom: 6px;
   }
 
   .text {
     padding: 12px 0;
+  }
+
+  .card-row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+  }
+
+  .info-card {
+    box-shadow: 0 2px 12px 0 #808080;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border-radius: .375rem;
+    margin: 6px 0;
+
+    .info-card-header {
+      text-align: left;
+      padding: 6px 12px;
+      width: 100%;
+      border-bottom: 1px solid #ebeef2;
+    }
+
+    .info-card-body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 6px;
+      align-content: center;
+      height: 100%;
+    }
   }
 }
