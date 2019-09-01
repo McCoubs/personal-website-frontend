@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterEvent } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -10,14 +11,11 @@ export class HeaderComponent {
   navbarOpen = false;
 
   constructor(private router: Router) {
-    // listen to router changes
-    router.events.subscribe((event) => {
-        // if routing stopped
-        if (event instanceof NavigationEnd) {
-          // un-open all dropdowns and close menu
-          this.resetDropdowns();
-          this.navbarOpen = false;
-        }
+    // listen to when routing has ended
+    router.events.pipe(filter((event: RouterEvent) => !!event && event instanceof NavigationEnd)).subscribe((event: RouterEvent) => {
+        // close all dropdowns and close menu
+        this.resetDropdowns();
+        this.navbarOpen = false;
       }
     );
   }
@@ -35,8 +33,6 @@ export class HeaderComponent {
   resetDropdowns() {
     // un-open all dropdowns and close menu
     const dropdowns = document.getElementsByClassName('navbar-nav')[0].querySelectorAll('.dropdown');
-    dropdowns.forEach(function (dropdown) {
-      dropdown.classList.remove('show');
-    });
+    dropdowns.forEach((dropdown) => dropdown.classList.remove('show'));
   }
 }

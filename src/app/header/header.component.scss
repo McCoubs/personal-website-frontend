@@ -50,8 +50,7 @@
 
     .item {
       background-color: $palette-blue;
-      color: #ffffff;
-      width: fit-content;
+      color: $palette-background;
       list-style: none;
       display: block;
       text-overflow: ellipsis;

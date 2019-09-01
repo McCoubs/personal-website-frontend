@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,6 @@ import { AboutMeComponent } from './about-me/about-me.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    AboutMeComponent
   ],
   imports: [
     SharedModule,
