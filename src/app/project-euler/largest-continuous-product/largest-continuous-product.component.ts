@@ -11,8 +11,8 @@ export class LargestContinuousProductComponent {
   loading = false;
   output: number;
   alertMessage: string;
-  @ViewChild('inputSeries') inputSeries: ElementRef;
-  @ViewChild('inputAdjacent') inputAdjacent: ElementRef;
+  @ViewChild('inputSeries', { static: true }) inputSeries: ElementRef;
+  @ViewChild('inputAdjacent', { static: true }) inputAdjacent: ElementRef;
 
   constructor(private projectEulerService: ProjectEulerService) {}
 

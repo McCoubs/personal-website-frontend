@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'project-euler',
-    loadChildren: './project-euler/project-euler.module#ProjectEulerModule'
+    loadChildren: () => import('./project-euler/project-euler.module').then(m => m.ProjectEulerModule)
   },
   {
     path: 'about-me',

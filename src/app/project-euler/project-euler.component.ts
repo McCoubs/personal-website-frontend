@@ -17,7 +17,7 @@ export class ProjectEulerComponent implements OnInit {
   sideBarOpen = true;
   currentProject = {};
   projectsList: Array<Object>;
-  @ViewChild(AdDirective) adHost: AdDirective;
+  @ViewChild(AdDirective, { static: true }) adHost: AdDirective;
 
   constructor(private projectEulerService: ProjectEulerService, private componentFactoryResolver: ComponentFactoryResolver) {}
 
