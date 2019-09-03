@@ -15,11 +15,12 @@
   }
 
   .heading-text {
-    font-size: 48px;
+    font-size: 42px;
     color: $palette-blue;
     margin: 24px;
 
     @media only screen and (min-width: map_get($grid-breakpoints, 'md')) {
+      font-size: 48px;
       margin: 64px 24px;
     }
 
@@ -76,6 +77,9 @@
         padding: 12px;
         align-content: center;
         height: 100%;
+        @media only screen and (min-width: map_get($grid-breakpoints, 'md')) {
+          font-size: 22px;
+        }
 
         div {
           margin: 0 6px;
