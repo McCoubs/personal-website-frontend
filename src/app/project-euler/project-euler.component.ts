@@ -1,11 +1,18 @@
+// angular
 import { Component, ComponentFactoryResolver, OnInit, ViewChild } from '@angular/core';
+
+// services
 import { ProjectEulerService } from './project-euler.service';
-import { AdDirective } from '../ad.directive';
+
+// components
 import { SumSquareDifferenceComponent } from './sum-square-difference/sum-square-difference.component';
 import { FindNthPrimeComponent } from './find-nth-prime/find-nth-prime.component';
 import { LargestContinuousProductComponent } from './largest-continuous-product/largest-continuous-product.component';
 import { LargestPrimeFactorComponent } from './largest-prime-factor/largest-prime-factor.component';
 import { PythagoreanTripletsComponent } from './pythagorean-triplets/pythagorean-triplets.component';
+
+// directives
+import { AdDirective } from '../ad.directive';
 
 @Component({
   selector: 'app-project-euler',
@@ -60,10 +67,10 @@ export class ProjectEulerComponent implements OnInit {
     if (this.currentProject['name'] !== project['name']) {
       this.currentProject = project;
       // dynamically insert component into directive
-      let componentFactory = this.componentFactoryResolver.resolveComponentFactory(project['component']);
-      let viewContainerRef = this.adHost.viewContainerRef;
+      const componentFactory = this.componentFactoryResolver.resolveComponentFactory(project['component']);
+      const viewContainerRef = this.adHost.viewContainerRef;
       viewContainerRef.clear();
-      let componentRef = viewContainerRef.createComponent(componentFactory);
+      viewContainerRef.createComponent(componentFactory);
     }
   }
 }
