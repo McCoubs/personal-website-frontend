@@ -8,7 +8,7 @@
     <button class="solution-submit-button" type="submit" (click)="findNthPrime(nthPrime.value)">Enter</button>
   </form>
   <div *ngIf="output || loading || output === 0" class="solution-output">
-    <fa *ngIf="loading" class="loading-icon" size="2x" name="spinner" animation="spin"></fa>
+    <fa-icon *ngIf="loading" class="loading-icon" size="2x" [icon]="faSpinner" [spin]="true"></fa-icon>
     <span *ngIf="output || output === 0">The {{ ordinalSuffix(nthPrime.value) }} prime is: {{ output }}</span>
   </div>
   <div class="write-up">

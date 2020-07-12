@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProjectEulerService } from '../project-euler.service';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-sum-square-difference',
@@ -11,6 +12,8 @@ export class SumSquareDifferenceComponent {
   loading = false;
   output: number;
   alertMessage: string;
+
+  faSpinner = faSpinner;
 
   constructor(private projectEulerService: ProjectEulerService) {}
 

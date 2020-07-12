@@ -5,14 +5,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // package imports
 import { NgbCollapseModule, NgbModule, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   imports: [
     NgbDropdownModule,
     NgbCollapseModule,
     NgbModule,
-    AngularFontAwesomeModule
+    FontAwesomeModule
   ],
   exports: [
     CommonModule,
@@ -20,7 +20,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     ReactiveFormsModule,
     NgbCollapseModule,
     NgbModule,
-    AngularFontAwesomeModule,
+    FontAwesomeModule,
     NgbDropdownModule
   ]
 })

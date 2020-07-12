@@ -1,10 +1,10 @@
 <div class="project-euler-container row">
   <button class="side-menu-button" type="button" [ngClass]="{ 'flipped': sideBarOpen }" (click)="sideBarToggle()">
-    <fa class="icon" name="chevron-right" size="2x"></fa>
+    <fa-icon class="icon" [icon]="faChevronRight" size="2x"></fa-icon>
   </button>
   <div class="project-selector" [ngClass]="{ 'open': sideBarOpen }">
     <button class="close-button" type="button" (click)="sideBarToggle()">
-      <fa class="icon" name="window-close" size="2x"></fa>
+      <fa-icon class="icon" [icon]="faWindowClose" size="2x"></fa-icon>
     </button>
     <div class="project-options-container">
       <button *ngFor="let project of projectsList" class="project-item" type="button" (click)="selectProject(project)">

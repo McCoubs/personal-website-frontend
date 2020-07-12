@@ -14,6 +14,9 @@ import { PythagoreanTripletsComponent } from './pythagorean-triplets/pythagorean
 // directives
 import { AdDirective } from '../ad.directive';
 
+// extras
+import { faChevronRight, faWindowClose } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-project-euler',
   templateUrl: './project-euler.component.html',
@@ -24,7 +27,10 @@ export class ProjectEulerComponent implements OnInit {
   sideBarOpen = true;
   currentProject = {};
   projectsList: Array<Object>;
-  @ViewChild(AdDirective, { static: true }) adHost: AdDirective;
+  @ViewChild(AdDirective, { static: true }) adHost: AdDirective
+
+  faChevronRight = faChevronRight;
+  faWindowClose = faWindowClose;
 
   constructor(private projectEulerService: ProjectEulerService, private componentFactoryResolver: ComponentFactoryResolver) {}
 

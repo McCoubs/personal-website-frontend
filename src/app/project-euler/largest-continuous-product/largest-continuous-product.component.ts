@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ProjectEulerService } from '../project-euler.service';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-largest-continuous-product',
@@ -13,6 +14,8 @@ export class LargestContinuousProductComponent {
   alertMessage: string;
   @ViewChild('inputSeries', { static: true }) inputSeries: ElementRef;
   @ViewChild('inputAdjacent', { static: true }) inputAdjacent: ElementRef;
+
+  faSpinner = faSpinner;
 
   constructor(private projectEulerService: ProjectEulerService) {}
 

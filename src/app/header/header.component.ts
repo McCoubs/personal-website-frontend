@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterEvent } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { faBars, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,9 @@ import { filter } from 'rxjs/operators';
 })
 export class HeaderComponent {
   navbarOpen = false;
+
+  faBars = faBars;
+  faEnvelope = faEnvelope;
 
   constructor(private router: Router) {
     // listen to when routing has ended
